@@ -11,7 +11,7 @@ int Power (int powerBase, int exponent)
     int power = 1;
     for (int i = 0; i < exponent; i++)
     {
-        power *= powerBase;
+        power = power * powerBase;
     }
     return power;
 }
@@ -26,8 +26,8 @@ bool ValideteExponent(int exponent)
     return true;
 }
 
-int powerBase = Prompt("Введите основание: ");
-int exponent = Prompt("Введите показатель: ");
+int powerBase = Prompt("Введите число возводимое в степень: ");
+int exponent = Prompt("Введите число степени: ");
 if (ValideteExponent(exponent))
 {
     Console.WriteLine($"Число {powerBase} в степени {exponent} равно {Power(powerBase, exponent)}");
